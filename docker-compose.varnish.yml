@@ -15,6 +15,6 @@ services:
     image: nexus-varnish:latest
     restart: on-failure
     ports:
-      - 10000:80
+      - 10001:80
     environment:
       - BACKEND_HOST=nginx
