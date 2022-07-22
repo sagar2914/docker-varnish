@@ -20,3 +20,5 @@ Run varnish docker compose
 ```
 docker-compose -f docker-compose.varnish.yml up --build
 ```
+
+Check varnish status http://localhost:10001/
