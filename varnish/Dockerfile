@@ -1,4 +1,4 @@
-FROM 379131197156.dkr.ecr.us-east-2.amazonaws.com/varnish:6.0
+FROM varnish:7.0.0
 
 # ARG BACKEND_HOST
 
