@@ -1,4 +1,4 @@
-FROM 379131197156.dkr.ecr.us-east-2.amazonaws.com/nginx-alpine:latest
+FROM nginx-alpine:latest
 
 ADD index.html /usr/share/nginx/html
 ADD nginx.conf /etc/nginx/
