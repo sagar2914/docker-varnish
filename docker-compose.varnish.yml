@@ -1,0 +1,20 @@
+version: '3.7'
+
+services: 
+  nginx:
+    build:
+      context: nginx/
+    image: nexus-nginx:latest
+    restart: on-failure
+    volumes:
+      - "./assets:/usr/share/nginx/html"
+
+  varnish:
+    build:
+      context: varnish/
+    image: nexus-varnish:latest
+    restart: on-failure
+    ports:
+      - 10000:80
+    environment:
+      - BACKEND_HOST=nginx

@@ -1,0 +1,14 @@
+version: '3.7'
+
+services: 
+  nginx:
+    image: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-2.amazonaws.com/nexus-nginx_service-dev:2fae0a90
+    restart: on-failure
+    volumes:
+      - "./assets:/usr/share/nginx/html"
+
+  varnish:
+    image: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-2.amazonaws.com/nexus-varnish_service-dev:2fae0a90
+    restart: on-failure
+    ports:
+      - 10000:80
